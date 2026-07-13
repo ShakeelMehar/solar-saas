@@ -5,14 +5,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        sans: ['"TT Norms Pro"', 'sans-serif'],
-      },
-      fontWeight: {
-        medium: '600',
-      }
-    },
+    extend: {},
   },
   plugins: [],
 }
