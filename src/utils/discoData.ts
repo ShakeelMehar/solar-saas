@@ -12,7 +12,7 @@ export const DISCO_DATA: DiscoInfo[] = [
     name: 'LESCO',
     fullName: 'Lahore Electric Supply Company',
     city: 'Lahore & adjacent areas',
-    ratePerUnit: 52,
+    ratePerUnit: 48,
   },
   {
     code: 'ke',

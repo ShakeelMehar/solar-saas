@@ -16,8 +16,8 @@ const WhatsappIcon = ({ size = 24, className = "" }) => (
 
 export const WhatsAppButton: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const phoneNumber = '92123456789'; // Representative phone number
-  const message = encodeURIComponent('As-salamu alaykum, I am visiting your website and would like to request a free solar quote for my home/business.');
+  const phoneNumber = '923044854300';
+  const message = encodeURIComponent('As-salamu alaykum, I am visiting the Bhatti Solar System website and would like to request a free solar quote for my home/business in Lahore.');
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   return (
@@ -29,11 +29,11 @@ export const WhatsAppButton: React.FC = () => {
           <div className="bg-brand-teal-deep text-white p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-brand-green flex items-center justify-center font-bold text-brand-teal-deep relative">
-                S
+                B
                 <span className="absolute bottom-0 right-0 w-3 h-3 bg-brand-green border-2 border-white rounded-full"></span>
               </div>
               <div>
-                <h4 className="font-semibold text-sm">Solar Solutions Support</h4>
+                <h4 className="font-semibold text-sm">Bhatti Solar Support</h4>
                 <p className="text-xs text-on-dark-muted">Typically replies instantly</p>
               </div>
             </div>
