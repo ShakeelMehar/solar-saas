@@ -1,32 +1,40 @@
-# React + TypeScript + Vite
+# Bhatti Solar System
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Marketing site for Bhatti Solar System (Lahore) — solar installation, LESCO net metering, and hybrid battery backup.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- [Next.js](https://nextjs.org) 16 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- [lucide-react](https://lucide.dev) icons
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+pnpm install
+pnpm dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Open [http://localhost:3000](http://localhost:3000).
+
+## Scripts
+
+| Command       | Description              |
+| ------------- | ------------------------ |
+| `pnpm dev`    | Start dev server         |
+| `pnpm build`  | Production build         |
+| `pnpm start`  | Serve production build   |
+| `pnpm lint`   | Run Oxlint               |
+
+## Project structure
+
+```
+src/
+  app/           # App Router pages & layout
+  components/    # UI components
+  lib/           # Shared constants & data
+  assets/        # Images (imported via next/image)
+public/          # Static files (favicon, etc.)
+```

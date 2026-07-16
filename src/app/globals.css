@@ -1,29 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Source+Code+Pro:wght@400;600&display=swap');
 @import "tailwindcss";
 
 @theme {
   /* Manrope stands in for Euclid Circular A (Mongo geometric sans) */
-  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'Source Code Pro', 'SF Mono', Menlo, Consolas, monospace;
+  --font-sans: var(--font-manrope), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: var(--font-source-code-pro), 'SF Mono', Menlo, Consolas, monospace;
 
-  --color-brand-green: #00ed64;
-  --color-brand-green-hover: #00b545;
-  --color-brand-green-dark: #00684a;
-  --color-brand-green-mid: #00a35c;
-  --color-brand-green-soft: #c3f0d2;
+  /* Brand primary = logo blue (token names keep brand-green* for mongos class compat) */
+  --color-brand-green: #00aeef;
+  --color-brand-green-hover: #0095d1;
+  --color-brand-green-dark: #0066b3;
+  --color-brand-green-mid: #0088cc;
+  --color-brand-green-soft: #cdebfa;
   --color-brand-teal-deep: #001e2b;
   --color-brand-teal: #003d4f;
-  --color-brand-teal-mid: #00684a;
-  --color-primary-pressed: #008c34;
+  --color-brand-teal-mid: #0a5575;
+  --color-primary-pressed: #0077b3;
+  /* Energy accent from logo bolt */
+  --color-brand-yellow: #f5c518;
+  --color-brand-yellow-soft: #fff6d6;
   --color-accent-purple: #7b3ff2;
   --color-accent-orange: #fa6e39;
   --color-accent-pink: #f06bb8;
   --color-accent-blue: #3d4f9f;
   --color-canvas: #ffffff;
   --color-canvas-dark: #001e2b;
-  --color-surface: #f9fbfa;
-  --color-surface-soft: #f4f7f6;
-  --color-surface-feature: #e3fcef;
+  --color-surface: #f8fafb;
+  --color-surface-soft: #f4f6f8;
+  --color-surface-feature: #e6f5fc;
   --color-hairline: #e1e5e8;
   --color-hairline-soft: #eceff1;
   --color-hairline-strong: #c1ccd6;
