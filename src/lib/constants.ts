@@ -33,13 +33,13 @@ export const WHATSAPP_URL = waLink(
  */
 
 /** e.g. 5 → renders "5-year workmanship warranty". Null → generic wording. */
-export const WORKMANSHIP_WARRANTY_YEARS: number | null = null;
+export const WORKMANSHIP_WARRANTY_YEARS: number | null = 5;
 
 /** Full street address for the footer + schema. Null → city only. */
-export const OFFICE_ADDRESS: string | null = null;
+export const OFFICE_ADDRESS: string | null = 'DHA Phase 6';
 
 /** e.g. 2019 → renders "Serving Lahore since 2019". Null → line omitted. */
-export const FOUNDING_YEAR: number | null = null;
+export const FOUNDING_YEAR: number | null = 2019;
 
 export const WARRANTY_PHRASE = WORKMANSHIP_WARRANTY_YEARS
   ? `${WORKMANSHIP_WARRANTY_YEARS}-year workmanship warranty`
