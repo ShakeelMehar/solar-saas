@@ -3,12 +3,11 @@ import type { ReactNode } from 'react';
 /**
  * Shared primitives. All server-renderable — nothing here needs client JS.
  *
- * Colour discipline: the brand blue is the only accent, and it is split by
- * job — `bg-accent` for fills (always with text-ink on top, since the fill
- * itself is too light to carry white text), `text-accent-ink` on light
- * grounds, `text-accent-on-ink` on dark ones. WhatsApp green is reserved
- * exclusively for the floating platform button, where it reads as the
- * WhatsApp mark rather than as a second accent.
+ * Colour discipline: `bg-accent` — the logo's amber — is reserved for solid
+ * CTAs and nothing else, always with `text-ink` on top. Blue is structural,
+ * split by ground: `text-brand-ink` on light, `text-brand-on-ink` on dark.
+ * WhatsApp green is reserved exclusively for the floating platform button,
+ * where it reads as the WhatsApp mark rather than as a third colour.
  */
 
 export function WhatsappIcon({
@@ -33,7 +32,7 @@ export function WhatsappIcon({
   );
 }
 
-/** Solid brand CTA. Min height 44px for mobile tap targets. */
+/** The solid amber CTA. Min height 44px for mobile tap targets. */
 export function WhatsappCta({
   href,
   children,
@@ -48,7 +47,7 @@ export function WhatsappCta({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex min-h-12 items-center justify-center gap-2.5 rounded-pill bg-accent px-6 py-3 text-sm font-semibold text-ink transition-colors duration-150 hover:bg-accent-hover active:bg-accent-press focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-ink ${className}`}
+      className={`inline-flex min-h-12 items-center justify-center gap-2.5 rounded-pill bg-accent px-6 py-3 text-sm font-semibold text-ink transition-colors duration-150 hover:bg-accent-hover active:bg-accent-press focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${className}`}
     >
       <WhatsappIcon size={17} />
       {children}
@@ -70,7 +69,7 @@ export function SecondaryCta({
 }) {
   const tone = onDark
     ? 'border-white/35 text-white hover:border-white/60 hover:bg-white/10 focus-visible:outline-white'
-    : 'border-line-strong text-ink hover:border-ink hover:bg-canvas-tint focus-visible:outline-accent-ink';
+    : 'border-line-strong text-ink hover:border-ink hover:bg-canvas-tint focus-visible:outline-brand';
 
   return (
     <a
@@ -174,7 +173,7 @@ export function Eyebrow({
   return (
     <p
       className={`text-eyebrow uppercase ${
-        onDark ? 'text-accent-on-ink' : 'text-accent-ink'
+        onDark ? 'text-brand-on-ink' : 'text-brand-ink'
       } ${className}`}
     >
       {children}

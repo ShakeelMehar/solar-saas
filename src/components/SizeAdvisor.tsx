@@ -93,9 +93,9 @@ export function SizeAdvisor() {
                 type="button"
                 onClick={() => setMonthlyUnits(preset.units)}
                 aria-pressed={active}
-                className={`min-h-11 rounded-pill border px-4 text-xs font-semibold transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-ink ${
+                className={`min-h-11 rounded-pill border px-4 text-xs font-semibold transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${
                   active
-                    ? 'border-accent bg-accent-wash text-accent-ink'
+                    ? 'border-brand bg-brand-wash text-brand-ink'
                     : 'border-line bg-canvas-tint text-body hover:border-line-strong hover:text-ink'
                 }`}
               >

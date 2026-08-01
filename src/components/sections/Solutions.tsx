@@ -62,7 +62,7 @@ export function Solutions() {
             >
               <Icon
                 size={26}
-                className="text-accent-on-ink"
+                className="text-brand-on-ink"
                 aria-hidden="true"
               />
               <h3 className="mt-5 max-w-xl font-display text-title text-white">
@@ -75,9 +75,9 @@ export function Solutions() {
           ) : (
             <article
               key={title}
-              className="rounded-panel border border-line bg-canvas-tint p-8 transition-colors duration-150 hover:border-accent-line hover:bg-accent-wash/45"
+              className="rounded-panel border border-line bg-canvas-tint p-8 transition-colors duration-150 hover:border-brand-line hover:bg-brand-wash/45"
             >
-              <Icon size={22} className="text-accent-ink" aria-hidden="true" />
+              <Icon size={22} className="text-brand-ink" aria-hidden="true" />
               <h3 className="mt-5 text-heading text-ink">{title}</h3>
               <p className="mt-2.5 text-sm leading-copy text-pretty text-body">
                 {body}

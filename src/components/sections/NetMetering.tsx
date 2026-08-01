@@ -24,7 +24,7 @@ export function NetMetering() {
           <h2 className="text-title text-white">
             Net metering, completely handled for you
           </h2>
-          <p className="mt-6 text-lead text-pretty text-accent-on-ink">
+          <p className="mt-6 text-lead text-pretty text-brand-on-ink">
             No running around offices. No confusion. We handle it end to end.
           </p>
         </div>

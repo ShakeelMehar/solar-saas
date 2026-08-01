@@ -118,20 +118,21 @@ export function Navbar() {
             aria-label={`Call ${BUSINESS_NAME}`}
             className={`flex h-11 w-11 items-center justify-center rounded-pill border transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 ${
               solid
-                ? 'border-line-strong text-ink hover:border-ink hover:bg-canvas-tint focus-visible:outline-accent-ink'
+                ? 'border-line-strong text-ink hover:border-ink hover:bg-canvas-tint focus-visible:outline-brand'
                 : 'border-white/35 text-white hover:border-white/60 hover:bg-white/10 focus-visible:outline-white'
             }`}
           >
             <Phone size={17} aria-hidden="true" />
           </a>
 
-          {/* The accent fill carries itself on both grounds, so the one solid
-              CTA on the page never changes colour as you scroll. */}
+          {/* Amber carries itself against the hero photograph and against the
+              white bar alike, so the one solid CTA in the header never has to
+              change colour as you scroll. */}
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex min-h-11 items-center gap-2 rounded-pill bg-accent px-4 text-sm font-semibold text-ink transition-colors duration-150 hover:bg-accent-hover active:bg-accent-press focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-ink sm:px-5"
+            className="flex min-h-11 items-center gap-2 rounded-pill bg-accent px-4 text-sm font-semibold text-ink transition-colors duration-150 hover:bg-accent-hover active:bg-accent-press focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:px-5"
           >
             <WhatsappIcon size={16} />
             <span className="hidden sm:inline">Free survey</span>
@@ -146,7 +147,7 @@ export function Navbar() {
             aria-label={isOpen ? 'Close menu' : 'Open menu'}
             className={`flex h-11 w-11 items-center justify-center rounded-pill transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 lg:hidden ${
               solid
-                ? 'text-ink focus-visible:outline-accent-ink'
+                ? 'text-ink focus-visible:outline-brand'
                 : 'text-white focus-visible:outline-white'
             }`}
           >
@@ -169,7 +170,7 @@ export function Navbar() {
               <a
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block py-3.5 text-base font-medium text-ink transition-colors hover:text-accent-ink"
+                className="block py-3.5 text-base font-medium text-ink transition-colors hover:text-brand-ink"
               >
                 {link.name}
               </a>

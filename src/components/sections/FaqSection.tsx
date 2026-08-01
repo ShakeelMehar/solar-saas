@@ -19,11 +19,11 @@ export function FaqSection() {
         <div className="border-t border-line">
           {FAQS.map((faq) => (
             <details key={faq.question} className="group border-b border-line">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-heading text-ink transition-colors duration-150 hover:text-accent-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-ink [&::-webkit-details-marker]:hidden">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-heading text-ink transition-colors duration-150 hover:text-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand [&::-webkit-details-marker]:hidden">
                 {faq.question}
                 <Plus
                   size={20}
-                  className="shrink-0 text-accent-ink transition-transform duration-200 group-open:rotate-45"
+                  className="shrink-0 text-brand-ink transition-transform duration-200 group-open:rotate-45"
                   aria-hidden="true"
                 />
               </summary>

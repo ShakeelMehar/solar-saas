@@ -47,14 +47,17 @@ export function Hero() {
           floats transparent over open sky and has nothing else to sit on, and
           eases off across the middle so the array keeps its texture. The
           radial adds density directly behind the centred column so the
-          headline has a ground of its own rather than relying on the wash. */}
+          headline has a ground of its own rather than relying on the wash.
+          Opacities are a couple of points heavier than they were, because
+          `ink` is now a navy rather than a near-black and lets more of the
+          photograph through at the same alpha. */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-[linear-gradient(to_bottom,rgba(0,32,46,0.82)_0%,rgba(0,32,46,0.58)_48%,rgba(0,32,46,0.72)_100%)]"
+        className="absolute inset-0 -z-10 bg-[linear-gradient(to_bottom,rgba(5,41,74,0.84)_0%,rgba(5,41,74,0.62)_48%,rgba(5,41,74,0.74)_100%)]"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-[radial-gradient(78%_58%_at_50%_44%,rgba(0,32,46,0.34)_0%,rgba(0,32,46,0)_72%)]"
+        className="absolute inset-0 -z-10 bg-[radial-gradient(78%_58%_at_50%_44%,rgba(5,41,74,0.36)_0%,rgba(5,41,74,0)_72%)]"
       />
 
       {/* Centred column. Capped narrower than the page grid: centred type only

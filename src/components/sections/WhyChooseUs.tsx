@@ -41,8 +41,8 @@ export function WhyChooseUs() {
       <ul className="mt-14 grid gap-x-12 gap-y-8 md:grid-cols-2">
         {REASONS.map((reason) => (
           <li key={reason.title} className="flex gap-4 border-t border-line pt-6">
-            <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-pill bg-accent-wash">
-              <Check size={15} className="text-accent-ink" aria-hidden="true" />
+            <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-pill bg-brand-wash">
+              <Check size={15} className="text-brand-ink" aria-hidden="true" />
             </span>
             <div>
               <h3 className="text-heading text-ink">{reason.title}</h3>

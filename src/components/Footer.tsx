@@ -50,7 +50,7 @@ export function Footer() {
             <li className="flex items-start gap-3">
               <MapPin
                 size={17}
-                className="mt-0.5 shrink-0 text-accent-ink"
+                className="mt-0.5 shrink-0 text-brand-ink"
                 aria-hidden="true"
               />
               <address className="leading-relaxed not-italic">
@@ -64,23 +64,23 @@ export function Footer() {
             <li className="flex items-center gap-3">
               <Phone
                 size={17}
-                className="shrink-0 text-accent-ink"
+                className="shrink-0 text-brand-ink"
                 aria-hidden="true"
               />
               <a
                 href={PHONE_TEL}
-                className="tnum font-medium text-ink transition-colors hover:text-accent-ink"
+                className="tnum font-medium text-ink transition-colors hover:text-brand-ink"
               >
                 {PHONE_DISPLAY}
               </a>
             </li>
             <li className="flex items-center gap-3">
-              <WhatsappIcon size={17} className="shrink-0 text-accent-ink" />
+              <WhatsappIcon size={17} className="shrink-0 text-brand-ink" />
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-accent-ink transition-colors hover:text-ink"
+                className="font-medium text-brand-ink transition-colors hover:text-ink"
               >
                 Chat on WhatsApp
               </a>

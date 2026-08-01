@@ -19,18 +19,21 @@ export default function OpengraphImage() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
-          background: 'linear-gradient(135deg, #00202e 0%, #0a3145 100%)',
+          background: 'linear-gradient(135deg, #05294a 0%, #0a3a63 100%)',
           padding: '72px 80px',
           fontFamily: 'sans-serif',
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+          {/* Amber standing in for the bolt. The card has nothing clickable
+              on it, so this is the one place the accent is not a CTA — it is
+              what makes the thumbnail recognisable in a WhatsApp list. */}
           <div
             style={{
               width: 14,
               height: 14,
               borderRadius: 999,
-              background: '#00a3e0',
+              background: '#febf14',
             }}
           />
           <div
@@ -38,7 +41,7 @@ export default function OpengraphImage() {
               fontSize: 26,
               letterSpacing: 2,
               textTransform: 'uppercase',
-              color: '#9fb7c4',
+              color: '#a2baca',
             }}
           >
             {BUSINESS_NAME}
@@ -57,7 +60,7 @@ export default function OpengraphImage() {
           >
             Solar System Installation in Lahore
           </div>
-          <div style={{ fontSize: 34, color: '#57d2ff' }}>
+          <div style={{ fontSize: 34, color: '#00bffe' }}>
             150+ installations · Net metering handled for you
           </div>
         </div>
@@ -70,7 +73,7 @@ export default function OpengraphImage() {
             borderTop: '1px solid rgba(255,255,255,0.15)',
             paddingTop: 28,
             fontSize: 28,
-            color: '#9fb7c4',
+            color: '#a2baca',
           }}
         >
           <div>On-grid · Hybrid · Off-grid · Commercial</div>
