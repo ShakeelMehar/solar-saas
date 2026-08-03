@@ -87,12 +87,17 @@ export function Footer() {
           {/* Column 2: Quick Links (3 cols) */}
           <div className="space-y-4 lg:col-span-3">
             <Eyebrow onDark>Quick Links</Eyebrow>
-            <ul className="space-y-2.5 text-sm">
+            {/* 14px text in a 10px-gapped list gave a 20px-tall tap target on
+                touch. The height comes from the link itself rather than the
+                list gap so the growth is hit area, not dead space between
+                rows; above sm: a mouse does not need it and the original
+                rhythm returns. Same pattern on the contact links below. */}
+            <ul className="space-y-0.5 text-sm sm:space-y-2.5">
               {QUICK_LINKS.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="group inline-flex items-center gap-1.5 text-inverse-muted transition-colors duration-150 hover:text-white"
+                    className="group inline-flex min-h-11 items-center gap-1.5 text-inverse-muted transition-colors duration-150 hover:text-white sm:min-h-0"
                   >
                     <ChevronRight
                       size={14}
@@ -134,7 +139,7 @@ export function Footer() {
                 />
                 <a
                   href={PHONE_TEL}
-                  className="tnum font-medium text-white transition-colors duration-150 hover:text-brand-on-ink"
+                  className="tnum inline-flex min-h-11 items-center font-medium text-white transition-colors duration-150 hover:text-brand-on-ink sm:min-h-0"
                 >
                   {PHONE_DISPLAY}
                 </a>
@@ -146,7 +151,7 @@ export function Footer() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-medium text-brand-on-ink transition-colors duration-150 hover:text-white"
+                  className="inline-flex min-h-11 items-center font-medium text-brand-on-ink transition-colors duration-150 hover:text-white sm:min-h-0"
                 >
                   Chat on WhatsApp
                 </a>
@@ -187,7 +192,7 @@ export function Footer() {
           <button
             type="button"
             onClick={scrollToTop}
-            className="inline-flex items-center gap-2 text-xs font-medium text-inverse-muted transition-colors duration-150 hover:text-white focus-visible:outline-none focus-visible:underline cursor-pointer"
+            className="inline-flex min-h-11 items-center gap-2 text-xs font-medium text-inverse-muted transition-colors duration-150 hover:text-white focus-visible:outline-none focus-visible:underline cursor-pointer sm:min-h-0"
           >
             <span>Back to top</span>
             <ArrowUp size={14} className="text-brand-on-ink" />
