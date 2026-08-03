@@ -20,9 +20,15 @@ export function SystemSizes() {
         <SizeAdvisor />
       </div>
 
-      {/* Rendered as a real table so the size/usage pairs are indexable text. */}
+      {/* Rendered as a real table so the size/usage pairs are indexable text.
+
+          The min-width was 26rem, which is wider than the 312px of content a
+          360px phone leaves after the section padding — so the whole table
+          scrolled sideways on the narrowest common screen, with no affordance
+          saying it could. 18rem lets it fit and wrap instead; overflow-x-auto
+          stays as the safety net for a long string, not as the normal path. */}
       <div className="mt-12 overflow-x-auto">
-        <table className="w-full min-w-104 border-collapse text-left">
+        <table className="w-full min-w-72 border-collapse text-left">
           <caption className="sr-only">
             Common solar system sizes in Lahore and the households or businesses
             they typically suit
@@ -31,7 +37,7 @@ export function SystemSizes() {
             <tr className="border-b border-line-strong">
               <th
                 scope="col"
-                className="py-3 pr-6 text-eyebrow uppercase text-muted"
+                className="py-3 pr-4 text-eyebrow uppercase text-muted sm:pr-6"
               >
                 System size
               </th>
@@ -45,7 +51,7 @@ export function SystemSizes() {
               <tr key={row.size} className="border-b border-line">
                 <th
                   scope="row"
-                  className="tnum py-4 pr-6 font-display text-lg font-bold whitespace-nowrap text-ink"
+                  className="tnum py-4 pr-4 font-display text-lg font-bold whitespace-nowrap text-ink sm:pr-6"
                 >
                   {row.size}
                 </th>

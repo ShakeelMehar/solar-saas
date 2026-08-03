@@ -28,7 +28,7 @@ export function Reviews() {
         {REVIEWS.map((review) => (
           <li
             key={review.name}
-            className="rounded-panel border border-line bg-canvas p-8"
+            className="rounded-panel border border-line bg-canvas p-6 sm:p-8"
           >
             <blockquote className="text-lead text-pretty text-ink">
               {review.quote}

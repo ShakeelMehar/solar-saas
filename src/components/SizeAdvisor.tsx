@@ -53,7 +53,7 @@ export function SizeAdvisor() {
 
   return (
     <div className="grid overflow-hidden rounded-panel border border-line md:grid-cols-2">
-      <div className="bg-canvas p-8 md:p-10">
+      <div className="bg-canvas p-6 sm:p-8 md:p-10">
         <label
           htmlFor="monthly-units"
           className="block text-eyebrow uppercase text-muted"
@@ -111,7 +111,7 @@ export function SizeAdvisor() {
         </p>
       </div>
 
-      <div className="flex flex-col justify-between bg-ink p-8 md:p-10">
+      <div className="flex flex-col justify-between bg-ink p-6 sm:p-8 md:p-10">
         <div>
           <Eyebrow onDark>Likely system size</Eyebrow>
           <p
