@@ -119,7 +119,7 @@ export function Navbar() {
             className={`flex h-11 w-11 items-center justify-center rounded-pill border transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 ${
               solid
                 ? 'border-line-strong text-ink hover:border-ink hover:bg-canvas-tint focus-visible:outline-brand'
-                : 'border-white/35 text-white hover:border-white/60 hover:bg-white/10 focus-visible:outline-white'
+                : 'border-white/55 text-white hover:border-white/80 hover:bg-white/10 focus-visible:outline-white'
             }`}
           >
             <Phone size={17} aria-hidden="true" />

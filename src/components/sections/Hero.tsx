@@ -95,7 +95,7 @@ export function Hero() {
                 <span className="tnum block font-display text-figure text-white">
                   {spec.figure}
                 </span>
-                <span className="mx-auto mt-2 block max-w-60 text-sm leading-snug text-pretty text-white/70">
+                <span className="mx-auto mt-2 block max-w-60 text-sm leading-snug text-pretty text-white/80">
                   {spec.label}
                 </span>
               </dd>

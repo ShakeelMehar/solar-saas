@@ -171,7 +171,7 @@ export function Footer() {
                   </span>
                 ))}
               </div>
-              <p className="text-xs text-inverse-muted/70">
+              <p className="text-xs text-inverse-muted/80">
                 &amp; surrounding areas across Lahore.
               </p>
             </div>
@@ -181,7 +181,7 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10 py-6">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-xs text-inverse-muted/70 sm:flex-row md:px-10">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-xs text-inverse-muted/80 sm:flex-row md:px-10">
           <p>© {currentYear} {BUSINESS_NAME}. All rights reserved.</p>
 
           <button

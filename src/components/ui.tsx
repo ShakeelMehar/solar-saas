@@ -67,8 +67,12 @@ export function SecondaryCta({
   onDark?: boolean;
   className?: string;
 }) {
+  /* The border is this control's only boundary, so it has to clear 3:1
+     (WCAG 1.4.11) against the worst ground it lands on — which is not the flat
+     navy but a blown-out white panel frame in the hero photograph. white/35
+     managed 3.03:1 on `ink` and only 2.25:1 there; /55 holds at 3.33:1. */
   const tone = onDark
-    ? 'border-white/35 text-white hover:border-white/60 hover:bg-white/10 focus-visible:outline-white'
+    ? 'border-white/55 text-white hover:border-white/80 hover:bg-white/10 focus-visible:outline-white'
     : 'border-line-strong text-ink hover:border-ink hover:bg-canvas-tint focus-visible:outline-brand';
 
   return (
