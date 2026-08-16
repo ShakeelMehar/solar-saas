@@ -16,18 +16,23 @@ export function FaqSection() {
           <SectionHeading>Frequently asked questions</SectionHeading>
         </div>
 
-        <div className="border-t border-line">
+        <div className="space-y-2">
           {FAQS.map((faq) => (
-            <details key={faq.question} className="group border-b border-line">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-heading text-ink transition-colors duration-150 hover:text-brand-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand [&::-webkit-details-marker]:hidden">
-                {faq.question}
-                <Plus
-                  size={20}
-                  className="shrink-0 text-brand-ink transition-transform duration-200 group-open:rotate-45"
-                  aria-hidden="true"
-                />
+            <details
+              key={faq.question}
+              className="group rounded-panel border border-line bg-canvas p-4 transition-all duration-200 open:border-accent/40 open:bg-canvas-tint/70 open:shadow-xs sm:p-5"
+            >
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-heading text-ink transition-colors duration-150 group-open:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent [&::-webkit-details-marker]:hidden">
+                <span className="font-semibold">{faq.question}</span>
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-pill border border-line bg-canvas shadow-xs transition-all duration-200 group-open:border-accent/50 group-open:bg-accent/20">
+                  <Plus
+                    size={16}
+                    className="text-ink transition-transform duration-200 group-open:rotate-45"
+                    aria-hidden="true"
+                  />
+                </span>
               </summary>
-              <p className="max-w-2xl pb-6 text-base leading-copy text-pretty text-body">
+              <p className="mt-3 max-w-2xl text-sm leading-copy text-pretty text-body">
                 {faq.answer}
               </p>
             </details>

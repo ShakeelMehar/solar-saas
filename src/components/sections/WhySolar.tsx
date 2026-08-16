@@ -1,10 +1,22 @@
+import { Zap } from 'lucide-react';
 import { Section } from '@/components/ui';
 
 export function WhySolar() {
   return (
     <Section id="why-solar" tone="tint">
       <div className="grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
-        <h2 className="text-title text-ink">Why Lahore is switching to solar</h2>
+        <div>
+          <h2 className="text-title text-ink">Why Lahore is switching to solar</h2>
+          <div className="mt-8 flex flex-wrap gap-2.5">
+            <span className="inline-flex items-center gap-1.5 rounded-pill border border-accent/40 bg-accent/20 px-3.5 py-1.5 text-xs font-bold text-ink shadow-xs">
+              <Zap size={13} className="fill-accent text-accent" />
+              3–4 Years Average Payback
+            </span>
+            <span className="inline-flex items-center gap-1.5 rounded-pill border border-line bg-canvas px-3.5 py-1.5 text-xs font-semibold text-body shadow-xs">
+              25-Year Panel Performance
+            </span>
+          </div>
+        </div>
 
         <div className="space-y-6">
           {/* Opening paragraph runs at lead size so the section has an entry

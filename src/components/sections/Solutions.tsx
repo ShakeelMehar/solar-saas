@@ -82,9 +82,11 @@ export function Solutions() {
           ) : (
             <article
               key={title}
-              className="rounded-panel border border-line bg-canvas-tint p-8 transition-all duration-200 hover:border-accent/40 hover:bg-canvas hover:shadow-sm"
+              className="group rounded-panel border border-line bg-canvas-tint p-8 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/50 hover:bg-canvas hover:shadow-float"
             >
-              <Icon size={22} className="text-brand-ink" aria-hidden="true" />
+              <div className="flex h-11 w-11 items-center justify-center rounded-pill border border-line bg-canvas shadow-xs transition-colors duration-200 group-hover:border-accent/40 group-hover:bg-accent/15">
+                <Icon size={20} className="text-ink transition-colors group-hover:text-ink" aria-hidden="true" />
+              </div>
               <h3 className="mt-5 text-heading text-ink">{title}</h3>
               <p className="mt-2.5 text-sm leading-copy text-pretty text-body">
                 {body}

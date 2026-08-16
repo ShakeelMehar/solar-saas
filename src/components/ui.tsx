@@ -47,7 +47,7 @@ export function WhatsappCta({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex min-h-12 items-center justify-center gap-2.5 rounded-pill bg-accent px-6 py-3 text-sm font-semibold text-ink transition-colors duration-150 hover:bg-accent-hover active:bg-accent-press focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${className}`}
+      className={`inline-flex min-h-12 items-center justify-center gap-2.5 rounded-pill bg-accent px-6 py-3 text-sm font-semibold text-ink shadow-[0_2px_14px_rgba(254,191,20,0.38)] transition-all duration-200 hover:bg-accent-hover hover:shadow-[0_4px_22px_rgba(254,191,20,0.55)] hover:-translate-y-0.5 active:translate-y-0 active:bg-accent-press focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${className}`}
     >
       <WhatsappIcon size={17} />
       {children}

@@ -48,12 +48,22 @@ export function SystemSizes() {
           </thead>
           <tbody>
             {SIZE_TABLE.map((row) => (
-              <tr key={row.size} className="border-b border-line">
+              <tr
+                key={row.size}
+                className="border-b border-line transition-colors duration-150 hover:bg-canvas"
+              >
                 <th
                   scope="row"
                   className="tnum py-4 pr-4 font-display text-lg font-bold whitespace-nowrap text-ink sm:pr-6"
                 >
-                  {row.size}
+                  <span className="inline-flex items-center gap-2">
+                    {row.size}
+                    {row.size === '10kW' ? (
+                      <span className="rounded-pill border border-accent/40 bg-accent/20 px-2 py-0.5 text-[10px] font-bold text-ink">
+                        Most Popular
+                      </span>
+                    ) : null}
+                  </span>
                 </th>
                 <td className="py-4 text-sm text-body">{row.suits}</td>
               </tr>

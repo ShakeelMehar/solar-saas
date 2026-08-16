@@ -12,15 +12,16 @@ export function TrustBar() {
   return (
     <section className="bg-canvas py-10 md:py-12">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <div className="grid gap-x-12 gap-y-5 lg:grid-cols-[10rem_minmax(0,1fr)] lg:items-baseline">
-          <Eyebrow className="lg:pt-1">Brands we install</Eyebrow>
+        <div className="grid gap-x-12 gap-y-6 lg:grid-cols-[10rem_minmax(0,1fr)] lg:items-center">
+          <Eyebrow className="lg:pt-0">Brands we install</Eyebrow>
 
-          <ul className="flex flex-wrap items-baseline gap-x-6 gap-y-2 md:gap-x-8">
+          <ul className="flex flex-wrap items-center gap-2.5">
             {PANEL_BRANDS.map((brand) => (
               <li
                 key={brand}
-                className="font-display text-base font-semibold tracking-tight text-ink md:text-lg"
+                className="inline-flex items-center gap-2 rounded-pill border border-line bg-canvas-tint px-3.5 py-1.5 font-display text-xs font-bold tracking-tight text-ink shadow-xs transition-all duration-200 hover:border-accent/60 hover:bg-accent/15 hover:shadow-sm md:text-sm"
               >
+                <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
                 {brand}
               </li>
             ))}

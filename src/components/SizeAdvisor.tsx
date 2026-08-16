@@ -53,7 +53,7 @@ export function SizeAdvisor() {
   );
 
   return (
-    <div className="grid overflow-hidden rounded-panel border border-line md:grid-cols-2">
+    <div className="grid overflow-hidden rounded-panel border border-line bg-canvas shadow-float md:grid-cols-2">
       <div className="bg-canvas p-6 sm:p-8 md:p-10">
         <label
           htmlFor="monthly-units"
@@ -130,15 +130,31 @@ export function SizeAdvisor() {
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-pretty text-inverse-muted">
             {recommended.suits}
           </p>
+
+          {/* Quick Estimator Metrics Grid */}
+          <div className="mt-6 grid grid-cols-2 gap-2.5 rounded-chip border border-white/10 bg-white/5 p-3.5 text-xs">
+            <div>
+              <span className="block text-white/60">Est. Generation</span>
+              <span className="tnum mt-0.5 block font-display text-sm font-bold text-white">
+                ~{(recommended.kw * UNITS_PER_KW_MONTH).toLocaleString()} units/mo
+              </span>
+            </div>
+            <div>
+              <span className="block text-white/60">Bill Cut</span>
+              <span className="mt-0.5 block font-display text-sm font-bold text-accent">
+                Up to 90%
+              </span>
+            </div>
+          </div>
         </div>
 
-        <div className="mt-10 border-t border-line-inverse pt-7">
+        <div className="mt-8 border-t border-line-inverse pt-6">
           <p className="text-sm leading-relaxed text-pretty text-inverse-muted">
             Solar prices change with panel and dollar rates, so we quote the
             current best price directly. Send your recent bill on WhatsApp and
             we&apos;ll confirm the right size and today&apos;s rate.
           </p>
-          <WhatsappCta href={cta} className="mt-6 w-full">
+          <WhatsappCta href={cta} className="mt-5 w-full">
             Get today&apos;s price
           </WhatsappCta>
         </div>

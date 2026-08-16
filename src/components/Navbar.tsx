@@ -132,7 +132,7 @@ export function Navbar() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex min-h-11 items-center gap-2 rounded-pill bg-accent px-4 text-sm font-semibold text-ink transition-colors duration-150 hover:bg-accent-hover active:bg-accent-press focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:px-5"
+            className="flex min-h-11 items-center gap-2 rounded-pill bg-accent px-4 text-sm font-semibold text-ink shadow-[0_2px_12px_rgba(254,191,20,0.38)] transition-all duration-150 hover:bg-accent-hover hover:shadow-[0_4px_18px_rgba(254,191,20,0.55)] hover:-translate-y-0.5 active:translate-y-0 active:bg-accent-press focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-5"
           >
             <WhatsappIcon size={16} />
             <span className="hidden sm:inline">Free survey</span>

@@ -17,7 +17,7 @@ export function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with Bhatti Solar System on WhatsApp"
-      className="fixed right-5 bottom-5 z-50 flex h-14 w-14 items-center justify-center rounded-pill bg-[#25D366] text-white shadow-float transition-transform duration-150 hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink motion-reduce:transition-none motion-reduce:hover:scale-100"
+      className="fixed right-5 bottom-5 z-50 flex h-14 w-14 items-center justify-center rounded-pill bg-[#25D366] text-white shadow-[0_8px_28px_rgba(37,211,102,0.45)] transition-all duration-200 hover:scale-110 hover:shadow-[0_12px_36px_rgba(37,211,102,0.6)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink motion-reduce:transition-none motion-reduce:hover:scale-100"
     >
       <WhatsappIcon size={26} />
     </a>
