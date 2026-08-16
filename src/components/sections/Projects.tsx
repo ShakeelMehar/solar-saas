@@ -166,7 +166,7 @@ export function Projects() {
             onClick={() => setActiveCategory(cat.id)}
             className={`cursor-pointer rounded-pill px-4 py-2 text-xs font-semibold transition-all duration-150 ${
               activeCategory === cat.id
-                ? 'bg-ink text-white shadow-sm'
+                ? 'border border-accent/40 bg-ink text-accent shadow-sm'
                 : 'border border-line bg-canvas text-body hover:border-line-strong hover:text-ink'
             }`}
           >
@@ -183,7 +183,7 @@ export function Projects() {
           return (
             <li
               key={project.id}
-              className="group relative flex flex-col overflow-hidden rounded-panel border border-line bg-canvas transition-all duration-300 hover:border-line-strong hover:shadow-float"
+              className="group relative flex flex-col overflow-hidden rounded-panel border border-line bg-canvas transition-all duration-300 hover:border-accent/60 hover:shadow-float"
             >
               {/* Card Image Area */}
               <div className="relative aspect-16/10 w-full overflow-hidden bg-ink">
@@ -203,7 +203,7 @@ export function Projects() {
 
                 {/* Floating Top Badges */}
                 <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between">
-                  <span className="tnum inline-flex items-center gap-1.5 rounded-pill border border-white/20 bg-ink/85 px-3 py-1 text-xs font-bold text-white shadow-sm backdrop-blur-md">
+                  <span className="tnum inline-flex items-center gap-1.5 rounded-pill border border-accent/40 bg-ink/90 px-3 py-1 text-xs font-bold text-white shadow-sm backdrop-blur-md">
                     <Zap className="h-3.5 w-3.5 fill-accent text-accent" />
                     {project.size}
                   </span>
@@ -230,7 +230,7 @@ export function Projects() {
               <div className="flex flex-1 flex-col justify-between p-5 sm:p-6">
                 <div className="space-y-2.5">
                   <div className="flex items-start gap-2 text-xs text-body">
-                    <Sun className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-ink" />
+                    <Sun className="mt-0.5 h-3.5 w-3.5 shrink-0 text-amber-500" />
                     <span className="font-medium leading-relaxed">
                       {project.specs.panels}
                     </span>

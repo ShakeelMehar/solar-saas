@@ -4,6 +4,7 @@ import {
   Unplug,
   Factory,
   Droplets,
+  Zap,
 } from 'lucide-react';
 import { Section, SectionHeading } from '@/components/ui';
 
@@ -58,13 +59,19 @@ export function Solutions() {
           featured ? (
             <article
               key={title}
-              className="rounded-panel bg-ink p-8 md:col-span-2 md:p-10"
+              className="relative overflow-hidden rounded-panel border-t-2 border-accent bg-ink p-8 shadow-float md:col-span-2 md:p-10"
             >
-              <Icon
-                size={26}
-                className="text-brand-on-ink"
-                aria-hidden="true"
-              />
+              <div className="flex flex-wrap items-center justify-between gap-4">
+                <Icon
+                  size={28}
+                  className="text-accent"
+                  aria-hidden="true"
+                />
+                <span className="inline-flex items-center gap-1.5 rounded-pill border border-accent/35 bg-accent/15 px-3 py-1 text-xs font-semibold text-accent backdrop-blur-sm">
+                  <Zap size={12} className="fill-accent text-accent" />
+                  Most Popular Choice in Lahore
+                </span>
+              </div>
               <h3 className="mt-5 max-w-xl font-display text-title text-white">
                 {title}
               </h3>
@@ -75,7 +82,7 @@ export function Solutions() {
           ) : (
             <article
               key={title}
-              className="rounded-panel border border-line bg-canvas-tint p-8 transition-colors duration-150 hover:border-brand-line hover:bg-brand-wash/45"
+              className="rounded-panel border border-line bg-canvas-tint p-8 transition-all duration-200 hover:border-accent/40 hover:bg-canvas hover:shadow-sm"
             >
               <Icon size={22} className="text-brand-ink" aria-hidden="true" />
               <h3 className="mt-5 text-heading text-ink">{title}</h3>

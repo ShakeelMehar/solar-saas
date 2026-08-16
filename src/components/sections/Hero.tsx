@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Phone } from 'lucide-react';
+import { Phone, Zap } from 'lucide-react';
 import {
   PHONE_TEL,
   PHONE_DISPLAY,
@@ -43,35 +43,37 @@ export function Hero() {
         sizes="100vw"
       />
 
-      {/* Two scrims. The vertical one is heaviest at the top, where the bar
-          floats transparent over open sky and has nothing else to sit on, and
-          eases off across the middle so the array keeps its texture. The
-          radial adds density directly behind the centred column so the
-          headline has a ground of its own rather than relying on the wash.
-          Opacities are a couple of points heavier than they were, because
-          `ink` is now a navy rather than a near-black and lets more of the
-          photograph through at the same alpha. */}
+      {/* Scrims with warm solar ambient glow */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-[linear-gradient(to_bottom,rgba(5,41,74,0.84)_0%,rgba(5,41,74,0.62)_48%,rgba(5,41,74,0.74)_100%)]"
+        className="absolute inset-0 -z-10 bg-[linear-gradient(to_bottom,rgba(5,41,74,0.84)_0%,rgba(5,41,74,0.62)_48%,rgba(5,41,74,0.78)_100%)]"
       />
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-10 bg-[radial-gradient(78%_58%_at_50%_44%,rgba(5,41,74,0.36)_0%,rgba(5,41,74,0)_72%)]"
       />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_45%_at_50%_35%,rgba(254,191,20,0.14)_0%,rgba(5,41,74,0)_70%)]"
+      />
 
-      {/* Centred column. Capped narrower than the page grid: centred type only
-          holds together while the reader's eye returns to a predictable left
-          edge, and a full 72rem measure loses that. */}
+      {/* Centred column. */}
       <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col items-center justify-center px-6 pt-28 pb-12 text-center md:pt-32">
+        {/* Trust Eyebrow Badge */}
+        <div className="mb-5 inline-flex items-center gap-2 rounded-pill border border-accent/35 bg-ink/75 px-3.5 py-1 text-xs font-semibold text-accent shadow-sm backdrop-blur-md">
+          <Zap className="h-3.5 w-3.5 fill-accent text-accent" />
+          <span>LESCO Net-Metering Certified &amp; Tier-1 Solar</span>
+        </div>
+
         <h1 className="text-display text-white">
           Solar system installation in Lahore
         </h1>
 
-        <p className="mt-6 max-w-xl text-lead text-pretty text-white/85">
-          Cut your electricity bill by up to 90% with a net-metered solar
-          system, designed and installed for your roof. On-grid, hybrid and
-          off-grid systems for homes, businesses and farms.
+        <p className="mt-6 max-w-xl text-lead text-pretty text-white/90">
+          Cut your electricity bill by{' '}
+          <span className="font-bold text-accent">up to 90%</span> with a
+          net-metered solar system, designed and installed for your roof.
+          On-grid, hybrid and off-grid systems for homes, businesses and farms.
         </p>
 
         <div className="mt-9 flex w-full flex-col items-stretch gap-3 sm:w-auto sm:flex-row sm:items-center sm:justify-center">
@@ -83,16 +85,14 @@ export function Hero() {
         </div>
       </div>
 
-      {/* The rail stays anchored to the foot of the viewport rather than
-          travelling with the centred column, so it reads as the base of the
-          hero and marks where the page continues. */}
+      {/* The rail stays anchored to the foot of the viewport */}
       <div className="mx-auto w-full max-w-6xl px-6 pb-10 md:px-10">
         <dl className="grid grid-cols-2 gap-x-6 gap-y-8 border-t border-white/15 pt-8 text-center lg:grid-cols-4 lg:gap-x-10">
           {SPECS.map((spec) => (
-            <div key={spec.label}>
+            <div key={spec.label} className="group">
               <dt className="sr-only">{spec.label}</dt>
               <dd>
-                <span className="tnum block font-display text-figure text-white">
+                <span className="tnum block font-display text-figure text-white transition-colors duration-200 group-hover:text-accent">
                   {spec.figure}
                 </span>
                 <span className="mx-auto mt-2 block max-w-60 text-sm leading-snug text-pretty text-white/80">

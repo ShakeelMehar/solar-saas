@@ -1,3 +1,4 @@
+import { Zap, CheckCircle2 } from 'lucide-react';
 import { Section } from '@/components/ui';
 
 /**
@@ -21,11 +22,18 @@ export function NetMetering() {
     <Section id="net-metering" tone="ink">
       <div className="grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-16">
         <div>
+          <div className="mb-4 inline-flex items-center gap-1.5 rounded-pill border border-accent/35 bg-accent/15 px-3 py-1 text-xs font-semibold text-accent backdrop-blur-sm">
+            <Zap size={12} className="fill-accent text-accent" />
+            100% Turnkey LESCO Service
+          </div>
           <h2 className="text-title text-white">
             Net metering, completely handled for you
           </h2>
-          <p className="mt-6 text-lead text-pretty text-brand-on-ink">
-            No running around offices. No confusion. We handle it end to end.
+          <p className="mt-6 text-lead text-pretty text-white/90">
+            No running around offices. No confusion.{' '}
+            <span className="font-semibold text-accent">
+              We handle it end to end.
+            </span>
           </p>
         </div>
 
@@ -40,9 +48,10 @@ export function NetMetering() {
             {HANDLED.map((item) => (
               <li
                 key={item}
-                className="border-t border-line-inverse py-4 text-sm font-medium text-white"
+                className="flex items-center gap-2.5 border-t border-line-inverse py-4 text-sm font-medium text-white"
               >
-                {item}
+                <CheckCircle2 size={16} className="shrink-0 text-accent" />
+                <span>{item}</span>
               </li>
             ))}
           </ul>

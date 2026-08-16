@@ -1,4 +1,4 @@
-import { Phone } from 'lucide-react';
+import { Phone, Zap } from 'lucide-react';
 import { PHONE_TEL, PHONE_DISPLAY, waLink } from '@/lib/constants';
 import { Section, WhatsappCta, SecondaryCta } from '@/components/ui';
 
@@ -9,6 +9,10 @@ export function FinalCta() {
     <Section id="contact" tone="ink">
       <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-16">
         <div>
+          <div className="mb-4 inline-flex items-center gap-1.5 rounded-pill border border-accent/35 bg-accent/15 px-3.5 py-1 text-xs font-semibold text-accent backdrop-blur-sm">
+            <Zap size={13} className="fill-accent text-accent" />
+            Zero Obligation · Free Consultation
+          </div>
           <h2 className="max-w-2xl text-display text-white">
             Get a free site survey
           </h2>

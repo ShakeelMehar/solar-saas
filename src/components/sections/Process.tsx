@@ -41,7 +41,7 @@ export function Process() {
           <li key={step.title} className="flex gap-5 border-t border-line pt-6">
             <span
               aria-hidden="true"
-              className="tnum shrink-0 font-display text-2xl font-bold text-brand-ink"
+              className="tnum flex h-9 w-9 shrink-0 items-center justify-center rounded-pill border border-accent/45 bg-accent/25 font-display text-sm font-bold text-ink shadow-xs"
             >
               {String(index + 1).padStart(2, '0')}
             </span>

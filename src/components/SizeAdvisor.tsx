@@ -2,6 +2,7 @@
 
 import type { CSSProperties } from 'react';
 import { useMemo, useState } from 'react';
+import { Zap } from 'lucide-react';
 import { waLink } from '@/lib/constants';
 import { WhatsappCta, Eyebrow } from '@/components/ui';
 
@@ -93,9 +94,9 @@ export function SizeAdvisor() {
                 type="button"
                 onClick={() => setMonthlyUnits(preset.units)}
                 aria-pressed={active}
-                className={`min-h-11 rounded-pill border px-4 text-xs font-semibold transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${
+                className={`min-h-11 cursor-pointer rounded-pill border px-4 text-xs font-semibold transition-all duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
                   active
-                    ? 'border-brand bg-brand-wash text-brand-ink'
+                    ? 'border-accent bg-accent/20 text-ink shadow-sm ring-1 ring-accent/30'
                     : 'border-line bg-canvas-tint text-body hover:border-line-strong hover:text-ink'
                 }`}
               >
@@ -113,14 +114,20 @@ export function SizeAdvisor() {
 
       <div className="flex flex-col justify-between bg-ink p-6 sm:p-8 md:p-10">
         <div>
-          <Eyebrow onDark>Likely system size</Eyebrow>
+          <div className="flex items-center justify-between">
+            <Eyebrow onDark>Likely system size</Eyebrow>
+            <span className="inline-flex items-center gap-1 rounded-pill border border-accent/35 bg-accent/15 px-2.5 py-0.5 text-[11px] font-semibold text-accent backdrop-blur-sm">
+              <Zap className="h-3 w-3 fill-accent text-accent" />
+              Optimal Fit
+            </span>
+          </div>
           <p
             aria-live="polite"
-            className="tnum mt-4 font-display text-stat text-white"
+            className="tnum mt-3 font-display text-stat text-accent"
           >
             {label}
           </p>
-          <p className="mt-4 max-w-xs text-sm leading-relaxed text-pretty text-inverse-muted">
+          <p className="mt-3 max-w-xs text-sm leading-relaxed text-pretty text-inverse-muted">
             {recommended.suits}
           </p>
         </div>
