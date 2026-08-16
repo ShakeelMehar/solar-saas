@@ -1,5 +1,5 @@
 import { Hero } from '@/components/sections/Hero';
-import { TrustBar } from '@/components/sections/TrustBar';
+// import { TrustBar } from '@/components/sections/TrustBar';
 import { WhySolar } from '@/components/sections/WhySolar';
 import { Solutions } from '@/components/sections/Solutions';
 import { SystemSizes } from '@/components/sections/SystemSizes';
@@ -30,7 +30,7 @@ export default function Home() {
       />
 
       <Hero />
-      <TrustBar />
+      {/* <TrustBar /> */}
       <WhySolar />
       <Solutions />
       <SystemSizes />
